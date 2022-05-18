@@ -25,9 +25,15 @@ string valueFromConsole = Console.ReadLine();
     }
 }
 }
-string CheckPolindrome(int number)
+void CheckPolindrome(int number)
 {
-   
+    string numberStr = number.ToString();
+    if(numberStr[0] == numberStr[4] && numberStr[1] == numberStr[3])
+        
+        Console.WriteLine($"Число {numberStr} является палиндромом");
+    else
+        Console.WriteLine($"Число {numberStr} не является палиндромом"); 
 }
 string message = "Введите пятизначное число: ";
 int num = GetNumber(message);
+CheckPolindrome(num);
